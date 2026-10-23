@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <memory>
 #include <string>
+#include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -28,8 +29,19 @@ enum class Op : std::uint8_t {
   FusedElementwise, FusedMatMulEpilogue
 };
 
+class Value;
 class Instruction;
 class Module;
+
+struct FusedElementwiseOp final {
+  Op op{Op::Relu};
+  std::vector<std::size_t> operand_indices;
+};
+
+struct FusionGroup final {
+  std::vector<Value*> external_inputs;
+  std::vector<FusedElementwiseOp> internal_ops;
+};
 
 class Value final {
  public:
@@ -84,6 +96,8 @@ class Module final {
   const std::vector<Value*>& inputs() const noexcept;
   const std::vector<Value*>& outputs() const noexcept;
   const std::vector<std::pair<Value*, float>>& constants() const noexcept;
+  void setFusionGroup(const Instruction* inst, FusionGroup group);
+  const FusionGroup* getFusionGroup(const Instruction* inst) const noexcept;
   std::string print() const;
 
  private:
@@ -92,6 +106,7 @@ class Module final {
   std::vector<std::unique_ptr<Instruction>> instructions_;
   std::vector<Value*> inputs_, outputs_;
   std::vector<std::pair<Value*, float>> constants_;
+  std::unordered_map<const Instruction*, FusionGroup> fusion_groups_;
 };
 
 class IRBuilder final {

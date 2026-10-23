@@ -166,6 +166,7 @@ bool Module::eraseInstruction(Instruction& instruction) {
   }
 
   Value* result_ptr = &instruction.result();
+  fusion_groups_.erase(&instruction);
   instructions_.erase(inst_it);
 
   auto val_it = std::find_if(values_.begin(), values_.end(),
@@ -220,6 +221,18 @@ const std::vector<Value*>& Module::outputs() const noexcept {
 
 const std::vector<std::pair<Value*, float>>& Module::constants() const noexcept {
   return constants_;
+}
+
+void Module::setFusionGroup(const Instruction* inst, FusionGroup group) {
+  fusion_groups_[inst] = std::move(group);
+}
+
+const FusionGroup* Module::getFusionGroup(const Instruction* inst) const noexcept {
+  auto it = fusion_groups_.find(inst);
+  if (it != fusion_groups_.end()) {
+    return &it->second;
+  }
+  return nullptr;
 }
 
 static const char* opToString(Op op) {

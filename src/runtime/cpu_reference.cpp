@@ -48,32 +48,23 @@ bool TensorBuffer::operator==(const TensorBuffer& other) const noexcept {
   return type == other.type && data == other.data;
 }
 
-// -----------------------------------------------------------------------------
-// CPUReferenceExecutor Evaluation Helpers
-// -----------------------------------------------------------------------------
+static float evalUnaryScalar(Op op, float x) {
+  switch (op) {
+    case Op::Relu: return std::max(0.0f, x);
+    case Op::Exp: return std::exp(x);
+    case Op::Neg: return -x;
+    default:
+      throw std::invalid_argument("CPUReferenceExecutor: unsupported unary operation");
+  }
+}
+
 static TensorBuffer evalUnary(Op op, const TensorBuffer& operand) {
   TensorBuffer result;
   result.type = operand.type;
   result.data.resize(operand.data.size());
 
-  switch (op) {
-    case Op::Relu:
-      for (std::size_t i = 0; i < operand.data.size(); ++i) {
-        result.data[i] = std::max(0.0f, operand.data[i]);
-      }
-      break;
-    case Op::Exp:
-      for (std::size_t i = 0; i < operand.data.size(); ++i) {
-        result.data[i] = std::exp(operand.data[i]);
-      }
-      break;
-    case Op::Neg:
-      for (std::size_t i = 0; i < operand.data.size(); ++i) {
-        result.data[i] = -operand.data[i];
-      }
-      break;
-    default:
-      throw std::invalid_argument("CPUReferenceExecutor: unsupported unary operation");
+  for (std::size_t i = 0; i < operand.data.size(); ++i) {
+    result.data[i] = evalUnaryScalar(op, operand.data[i]);
   }
   return result;
 }
@@ -233,6 +224,59 @@ static TensorBuffer evalFusedMatMulEpilogue(
   return result;
 }
 
+static float getBufferElementAt(const TensorBuffer& buf, std::size_t out_idx, const TensorType& out_type) {
+  if (buf.type.isScalar() || buf.data.size() == 1) {
+    return buf.data[0];
+  }
+  if (buf.type.shape == out_type.shape) {
+    return buf.data[out_idx];
+  }
+  if (out_type.rank() == 2 && buf.type.rank() == 1 && out_type.shape[1] == buf.type.shape[0]) {
+    std::size_t col = out_idx % static_cast<std::size_t>(out_type.shape[1]);
+    return buf.data[col];
+  }
+  throw std::invalid_argument("CPUReferenceExecutor: incompatible broadcast shape in fused elementwise");
+}
+
+static TensorBuffer evalFusedElementwise(const FusionGroup& fg,
+                                         const std::vector<const TensorBuffer*>& in_bufs,
+                                         const TensorType& result_type) {
+  if (fg.internal_ops.empty()) {
+    throw std::invalid_argument("CPUReferenceExecutor: FusedElementwise FusionGroup has no internal operations");
+  }
+  TensorBuffer result;
+  result.type = result_type;
+  std::size_t num_elements = 1;
+  for (std::int64_t d : result_type.shape) {
+    num_elements *= static_cast<std::size_t>(d);
+  }
+  result.data.resize(num_elements);
+
+  std::size_t total_nodes = fg.external_inputs.size() + fg.internal_ops.size();
+  std::vector<float> node_values(total_nodes);
+
+  for (std::size_t i = 0; i < num_elements; ++i) {
+    for (std::size_t j = 0; j < in_bufs.size(); ++j) {
+      node_values[j] = getBufferElementAt(*in_bufs[j], i, result_type);
+    }
+    for (std::size_t k = 0; k < fg.internal_ops.size(); ++k) {
+      const auto& iop = fg.internal_ops[k];
+      std::size_t dest_idx = fg.external_inputs.size() + k;
+      if (iop.operand_indices.size() == 1) {
+        node_values[dest_idx] = evalUnaryScalar(iop.op, node_values[iop.operand_indices[0]]);
+      } else if (iop.operand_indices.size() == 2) {
+        node_values[dest_idx] = applyBinaryScalarOp(
+            iop.op, node_values[iop.operand_indices[0]], node_values[iop.operand_indices[1]]);
+      } else {
+        throw std::invalid_argument("CPUReferenceExecutor: unsupported arity in internal fused op");
+      }
+    }
+    result.data[i] = node_values.back();
+  }
+
+  return result;
+}
+
 // -----------------------------------------------------------------------------
 // CPUReferenceExecutor
 // -----------------------------------------------------------------------------
@@ -337,6 +381,23 @@ std::vector<TensorBuffer> CPUReferenceExecutor::execute(
           throw std::runtime_error("CPUReferenceExecutor: FusedMatMulEpilogue operands missing");
         }
         env[res] = evalFusedMatMulEpilogue(a_it->second, b_it->second, bias_it->second);
+        break;
+      }
+      case Op::FusedElementwise: {
+        const FusionGroup* fg = module.getFusionGroup(inst.get());
+        if (!fg) {
+          throw std::runtime_error("CPUReferenceExecutor: FusedElementwise missing FusionGroup payload");
+        }
+        std::vector<const TensorBuffer*> in_bufs;
+        in_bufs.reserve(inst->operands().size());
+        for (const Value* opnd : inst->operands()) {
+          auto it = env.find(opnd);
+          if (it == env.end()) {
+            throw std::runtime_error("CPUReferenceExecutor: FusedElementwise operand not found in environment");
+          }
+          in_bufs.push_back(&it->second);
+        }
+        env[res] = evalFusedElementwise(*fg, in_bufs, res->type());
         break;
       }
       default:

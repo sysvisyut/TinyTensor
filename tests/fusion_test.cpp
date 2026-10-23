@@ -229,3 +229,265 @@ TEST(FusionTest, CPUEquivalenceNumericalAccuracy) {
     EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
   }
 }
+
+TEST(FusionTest, FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& x = b.input("x", TensorType{DType::F32, {2, 2}});
+  Value& r = b.createUnary(Op::Relu, x);
+  Value& e = b.createUnary(Op::Exp, r);
+  b.output(e);
+
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  TensorBuffer x_buf(TensorType{DType::F32, {2, 2}}, {-2.0f, -0.5f, 0.0f, 1.5f});
+  CPUReferenceExecutor executor;
+  auto unfused_out = executor.execute(module, {{"x", x_buf}});
+
+  FusionPass pass;
+  EXPECT_TRUE(pass.runOnModule(module));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_TRUE(res.ok) << "Verifier failed: " << res.message;
+
+  const std::string expected_ir =
+      "module {\n"
+      "  %0 = input \"x\" : f32[2,2]\n"
+      "  %3 = fused_elementwise %0 : f32[2,2]\n"
+      "  output %3\n"
+      "}\n";
+  EXPECT_EQ(module.print(), expected_ir);
+
+  auto fused_out = executor.execute(module, {{"x", x_buf}});
+  ASSERT_EQ(unfused_out.size(), 1u);
+  ASSERT_EQ(fused_out.size(), 1u);
+  EXPECT_EQ(unfused_out[0].type, fused_out[0].type);
+  for (std::size_t i = 0; i < unfused_out[0].data.size(); ++i) {
+    EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
+  }
+}
+
+TEST(FusionTest, FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {2, 3}});
+  Value& c = b.input("b", TensorType{DType::F32, {2, 3}});
+  Value& sum = b.createBinary(Op::Add, a, c);
+  Value& out = b.createUnary(Op::Relu, sum);
+  b.output(out);
+
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  TensorBuffer a_buf(TensorType{DType::F32, {2, 3}}, {-3.0f, 1.0f, -0.5f, 4.0f, -10.0f, 0.0f});
+  TensorBuffer b_buf(TensorType{DType::F32, {2, 3}}, {2.0f, -2.0f, 1.5f, -1.0f, 5.0f, 0.0f});
+
+  CPUReferenceExecutor executor;
+  auto unfused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}});
+
+  FusionPass pass;
+  EXPECT_TRUE(pass.runOnModule(module));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_TRUE(res.ok) << "Verifier failed: " << res.message;
+
+  const std::string expected_ir =
+      "module {\n"
+      "  %0 = input \"a\" : f32[2,3]\n"
+      "  %1 = input \"b\" : f32[2,3]\n"
+      "  %4 = fused_elementwise %0, %1 : f32[2,3]\n"
+      "  output %4\n"
+      "}\n";
+  EXPECT_EQ(module.print(), expected_ir);
+
+  auto fused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}});
+  ASSERT_EQ(unfused_out.size(), 1u);
+  ASSERT_EQ(fused_out.size(), 1u);
+  EXPECT_EQ(unfused_out[0].type, fused_out[0].type);
+  for (std::size_t i = 0; i < unfused_out[0].data.size(); ++i) {
+    EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
+  }
+}
+
+TEST(FusionTest, FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {2, 2}});
+  Value& c = b.input("b", TensorType{DType::F32, {2, 2}});
+  Value& d = b.input("c", TensorType{DType::F32, {2, 2}});
+  Value& prod = b.createBinary(Op::Mul, a, c);
+  Value& sum = b.createBinary(Op::Add, prod, d);
+  b.output(sum);
+
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  TensorBuffer a_buf(TensorType{DType::F32, {2, 2}}, {2.0f, -3.0f, 0.5f, 4.0f});
+  TensorBuffer b_buf(TensorType{DType::F32, {2, 2}}, {3.0f, 2.0f, -4.0f, 1.5f});
+  TensorBuffer c_buf(TensorType{DType::F32, {2, 2}}, {-1.0f, 10.0f, 3.0f, -2.0f});
+
+  CPUReferenceExecutor executor;
+  auto unfused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}, {"c", c_buf}});
+
+  FusionPass pass;
+  EXPECT_TRUE(pass.runOnModule(module));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_TRUE(res.ok) << "Verifier failed: " << res.message;
+
+  const std::string expected_ir =
+      "module {\n"
+      "  %0 = input \"a\" : f32[2,2]\n"
+      "  %1 = input \"b\" : f32[2,2]\n"
+      "  %2 = input \"c\" : f32[2,2]\n"
+      "  %5 = fused_elementwise %0, %1, %2 : f32[2,2]\n"
+      "  output %5\n"
+      "}\n";
+  EXPECT_EQ(module.print(), expected_ir);
+
+  auto fused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}, {"c", c_buf}});
+  ASSERT_EQ(unfused_out.size(), 1u);
+  ASSERT_EQ(fused_out.size(), 1u);
+  EXPECT_EQ(unfused_out[0].type, fused_out[0].type);
+  for (std::size_t i = 0; i < unfused_out[0].data.size(); ++i) {
+    EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
+  }
+}
+
+TEST(FusionTest, FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {3, 2}});
+  Value& c = b.input("b", TensorType{DType::F32, {3, 2}});
+  Value& d = b.input("c", TensorType{DType::F32, {3, 2}});
+  Value& prod = b.createBinary(Op::Mul, a, c);
+  Value& sum = b.createBinary(Op::Add, prod, d);
+  Value& out = b.createUnary(Op::Relu, sum);
+  b.output(out);
+
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  TensorBuffer a_buf(TensorType{DType::F32, {3, 2}}, {1.0f, -2.0f, 3.0f, -4.0f, 2.5f, 0.0f});
+  TensorBuffer b_buf(TensorType{DType::F32, {3, 2}}, {2.0f, 3.0f, -1.0f, 2.0f, -2.0f, 5.0f});
+  TensorBuffer c_buf(TensorType{DType::F32, {3, 2}}, {-5.0f, 10.0f, 2.0f, 3.0f, 6.0f, -1.0f});
+
+  CPUReferenceExecutor executor;
+  auto unfused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}, {"c", c_buf}});
+
+  FusionPass pass;
+  EXPECT_TRUE(pass.runOnModule(module));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_TRUE(res.ok) << "Verifier failed: " << res.message;
+
+  const std::string expected_ir =
+      "module {\n"
+      "  %0 = input \"a\" : f32[3,2]\n"
+      "  %1 = input \"b\" : f32[3,2]\n"
+      "  %2 = input \"c\" : f32[3,2]\n"
+      "  %7 = fused_elementwise %0, %1, %2 : f32[3,2]\n"
+      "  output %7\n"
+      "}\n";
+  EXPECT_EQ(module.print(), expected_ir);
+
+  auto fused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}, {"c", c_buf}});
+  ASSERT_EQ(unfused_out.size(), 1u);
+  ASSERT_EQ(fused_out.size(), 1u);
+  EXPECT_EQ(unfused_out[0].type, fused_out[0].type);
+  for (std::size_t i = 0; i < unfused_out[0].data.size(); ++i) {
+    EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
+  }
+}
+
+TEST(FusionTest, RejectElementwiseSharedProducerMulAddSub) {
+  // Key negative legality case from specs/ir_schema.md:
+  // %3 = mul %0, %1 feeds both add %3, %2 and sub %3, %2.
+  // Fusing only one consumer would duplicate/reorder the producer and is rejected.
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {4, 4}});
+  Value& c = b.input("b", TensorType{DType::F32, {4, 4}});
+  Value& d = b.input("c", TensorType{DType::F32, {4, 4}});
+
+  Value& prod = b.createBinary(Op::Mul, a, c);
+  Value& sum = b.createBinary(Op::Add, prod, d);
+  Value& diff = b.createBinary(Op::Sub, prod, d);
+  b.output(sum);
+  b.output(diff);
+
+  EXPECT_EQ(prod.useCount(), 2u);
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  std::string pre_print = module.print();
+
+  FusionPass pass;
+  bool changed = pass.runOnModule(module);
+
+  EXPECT_FALSE(changed);
+  EXPECT_EQ(module.print(), pre_print);
+  EXPECT_TRUE(verifyModule(module).ok);
+}
+
+TEST(FusionTest, RejectElementwiseIntermediateOutput) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {4, 4}});
+  Value& c = b.input("b", TensorType{DType::F32, {4, 4}});
+
+  Value& sum = b.createBinary(Op::Add, a, c);
+  Value& out = b.createUnary(Op::Relu, sum);
+  b.output(sum); // Intermediate sum marked as observable output
+  b.output(out);
+
+  EXPECT_TRUE(sum.isOutput());
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  std::string pre_print = module.print();
+
+  FusionPass pass;
+  bool changed = pass.runOnModule(module);
+
+  EXPECT_FALSE(changed);
+  EXPECT_EQ(module.print(), pre_print);
+  EXPECT_TRUE(verifyModule(module).ok);
+}
+
+TEST(FusionTest, ElementwiseDownstreamConsumerPreservesDominance) {
+  Module module;
+  IRBuilder b(module);
+
+  Value& a = b.input("a", TensorType{DType::F32, {2, 2}});
+  Value& c = b.input("b", TensorType{DType::F32, {2, 2}});
+
+  Value& sum = b.createBinary(Op::Add, a, c);
+  Value& out = b.createUnary(Op::Relu, sum);
+  Value& downstream = b.createUnary(Op::Exp, out);
+  b.output(downstream);
+
+  EXPECT_TRUE(verifyModule(module).ok);
+
+  TensorBuffer a_buf(TensorType{DType::F32, {2, 2}}, {1.0f, -2.0f, 0.5f, 3.0f});
+  TensorBuffer b_buf(TensorType{DType::F32, {2, 2}}, {-0.5f, 1.0f, 1.5f, -4.0f});
+
+  CPUReferenceExecutor executor;
+  auto unfused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}});
+
+  FusionPass pass;
+  EXPECT_TRUE(pass.runOnModule(module));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_TRUE(res.ok) << "Dominance violation detected: " << res.message;
+
+  auto fused_out = executor.execute(module, {{"a", a_buf}, {"b", b_buf}});
+  ASSERT_EQ(unfused_out.size(), 1u);
+  ASSERT_EQ(fused_out.size(), 1u);
+  EXPECT_EQ(unfused_out[0].type, fused_out[0].type);
+  for (std::size_t i = 0; i < unfused_out[0].data.size(); ++i) {
+    EXPECT_NEAR(unfused_out[0].data[i], fused_out[0].data[i], 1e-5f);
+  }
+}
+

@@ -250,6 +250,41 @@ VerificationResult verifyModule(const Module& module) {
           return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
                              " requires at least 1 operand"};
         }
+        const FusionGroup* fg = module.getFusionGroup(inst);
+        if (!fg) {
+          return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                             " missing FusionGroup payload"};
+        }
+        if (fg->external_inputs.size() != inst->operands().size()) {
+          return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                             " external inputs count mismatch with FusionGroup payload"};
+        }
+        for (std::size_t k = 0; k < fg->external_inputs.size(); ++k) {
+          if (fg->external_inputs[k] != inst->operands()[k]) {
+            return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                               " operand " + std::to_string(k) +
+                               " does not match FusionGroup external input"};
+          }
+        }
+        if (fg->internal_ops.empty()) {
+          return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                             " has empty internal operations in FusionGroup"};
+        }
+        std::size_t total_nodes = fg->external_inputs.size();
+        for (std::size_t op_k = 0; op_k < fg->internal_ops.size(); ++op_k) {
+          const auto& iop = fg->internal_ops[op_k];
+          if (iop.operand_indices.empty()) {
+            return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                               " internal op has no operands"};
+          }
+          for (std::size_t opnd_idx : iop.operand_indices) {
+            if (opnd_idx >= total_nodes) {
+              return {false, "FusedElementwise instruction %" + std::to_string(result->id()) +
+                                 " internal op operand index out of range"};
+            }
+          }
+          total_nodes++;
+        }
         break;
       }
       default:

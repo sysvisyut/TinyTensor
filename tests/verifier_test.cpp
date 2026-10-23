@@ -173,3 +173,96 @@ TEST(VerifierTest, RejectIllegalOpcodeInstruction) {
   EXPECT_NE(res.message.find("illegal opcode"), std::string::npos)
       << "Message: " << res.message;
 }
+
+TEST(VerifierTest, RejectFusedElementwiseMissingPayload) {
+  Module module;
+  Value& x = module.addInput("x", TensorType{DType::F32, {4, 4}});
+  Instruction& inst = module.addInstruction(Op::FusedElementwise, {&x}, TensorType{DType::F32, {4, 4}});
+  module.addOutput(inst.result());
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_FALSE(res.ok);
+  EXPECT_NE(res.message.find("missing FusionGroup payload"), std::string::npos)
+      << "Message: " << res.message;
+}
+
+TEST(VerifierTest, RejectFusedElementwiseOperandCountMismatch) {
+  Module module;
+  Value& x = module.addInput("x", TensorType{DType::F32, {4, 4}});
+  Value& y = module.addInput("y", TensorType{DType::F32, {4, 4}});
+  Instruction& inst = module.addInstruction(Op::FusedElementwise, {&x}, TensorType{DType::F32, {4, 4}});
+  module.addOutput(inst.result());
+
+  FusionGroup fg;
+  fg.external_inputs = {&x, &y};
+  FusedElementwiseOp iop;
+  iop.op = Op::Add;
+  iop.operand_indices = {0, 1};
+  fg.internal_ops.push_back(iop);
+
+  module.setFusionGroup(&inst, std::move(fg));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_FALSE(res.ok);
+  EXPECT_NE(res.message.find("external inputs count mismatch"), std::string::npos)
+      << "Message: " << res.message;
+}
+
+TEST(VerifierTest, RejectFusedElementwiseOperandMismatch) {
+  Module module;
+  Value& x = module.addInput("x", TensorType{DType::F32, {4, 4}});
+  Value& y = module.addInput("y", TensorType{DType::F32, {4, 4}});
+  Instruction& inst = module.addInstruction(Op::FusedElementwise, {&x}, TensorType{DType::F32, {4, 4}});
+  module.addOutput(inst.result());
+
+  FusionGroup fg;
+  fg.external_inputs = {&y};
+  FusedElementwiseOp iop;
+  iop.op = Op::Relu;
+  iop.operand_indices = {0};
+  fg.internal_ops.push_back(iop);
+
+  module.setFusionGroup(&inst, std::move(fg));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_FALSE(res.ok);
+  EXPECT_NE(res.message.find("does not match FusionGroup external input"), std::string::npos)
+      << "Message: " << res.message;
+}
+
+TEST(VerifierTest, RejectFusedElementwiseEmptyInternalOps) {
+  Module module;
+  Value& x = module.addInput("x", TensorType{DType::F32, {4, 4}});
+  Instruction& inst = module.addInstruction(Op::FusedElementwise, {&x}, TensorType{DType::F32, {4, 4}});
+  module.addOutput(inst.result());
+
+  FusionGroup fg;
+  fg.external_inputs = {&x};
+  module.setFusionGroup(&inst, std::move(fg));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_FALSE(res.ok);
+  EXPECT_NE(res.message.find("has empty internal operations"), std::string::npos)
+      << "Message: " << res.message;
+}
+
+TEST(VerifierTest, RejectFusedElementwiseOperandIndexOutOfRange) {
+  Module module;
+  Value& x = module.addInput("x", TensorType{DType::F32, {4, 4}});
+  Instruction& inst = module.addInstruction(Op::FusedElementwise, {&x}, TensorType{DType::F32, {4, 4}});
+  module.addOutput(inst.result());
+
+  FusionGroup fg;
+  fg.external_inputs = {&x};
+  FusedElementwiseOp iop;
+  iop.op = Op::Relu;
+  iop.operand_indices = {42}; // out of range
+  fg.internal_ops.push_back(iop);
+  module.setFusionGroup(&inst, std::move(fg));
+
+  VerificationResult res = verifyModule(module);
+  EXPECT_FALSE(res.ok);
+  EXPECT_NE(res.message.find("internal op operand index out of range"), std::string::npos)
+      << "Message: " << res.message;
+}
+
