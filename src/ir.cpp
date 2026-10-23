@@ -187,6 +187,10 @@ const std::vector<Value*>& Module::outputs() const noexcept {
   return outputs_;
 }
 
+const std::vector<std::pair<Value*, float>>& Module::constants() const noexcept {
+  return constants_;
+}
+
 static const char* opToString(Op op) {
   switch (op) {
     case Op::Input: return "input";

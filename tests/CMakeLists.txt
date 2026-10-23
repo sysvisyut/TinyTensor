@@ -53,3 +53,16 @@ target_link_libraries(tinytensor_verifier_test
 )
 
 gtest_discover_tests(tinytensor_verifier_test)
+
+add_executable(tinytensor_cpu_reference_test
+  cpu_reference_test.cpp
+)
+
+target_link_libraries(tinytensor_cpu_reference_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_cpu_reference_test)

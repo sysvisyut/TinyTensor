@@ -93,7 +93,7 @@ ctest --test-dir build --output-on-failure
 | **5** | Optimization: Dead-Code Elimination (DCE), Constant Folding, Algebraic Simplification | Pending |
 | **6** | Optimization: Common Subexpression Elimination (CSE) | Pending |
 | **7** | Optimization: Elementwise and MatMul epilogue kernel fusion | Pending |
-| **8** | CPU Reference Interpreter: execution oracle for test validation | Pending |
+| **8** | CPU Reference Interpreter: execution oracle for test validation | **Complete** |
 | **9** | Backend: LLVM NVPTX target setup and index-write smoke test | Pending |
 | **10** | Runtime: CUDA Driver API wrapper (memory, module load, kernel launch) | Pending |
 | **11** | Backend Lowering: Unfused elementwise and naive matmul kernels | Pending |

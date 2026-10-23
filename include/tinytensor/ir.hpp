@@ -79,6 +79,7 @@ class Module final {
   const std::vector<std::unique_ptr<Instruction>>& instructions() const noexcept;
   const std::vector<Value*>& inputs() const noexcept;
   const std::vector<Value*>& outputs() const noexcept;
+  const std::vector<std::pair<Value*, float>>& constants() const noexcept;
   std::string print() const;
 
  private:
