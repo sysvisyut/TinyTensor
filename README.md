@@ -88,9 +88,9 @@ ctest --test-dir build --output-on-failure
 | **0** | Project Setup, CMake, C++17, GoogleTest discovery, CPU-only configuration | **Complete** |
 | **1** | Core Tensor IR (`api_contracts.md`), Module, Value, Instruction, Canonical Printer | **Complete** |
 | **2** | IR Verifier: type/shape checks, use-def invariants, broadcast legality | **Complete** |
-| **3** | Pass Manager: sequential pipeline, verification hooks, dirty tracking | Pending |
+| **3** | Pass Manager: sequential pipeline, verification hooks, dirty tracking | **Complete** |
 | **4** | Frontend DSL: Lexer, recursive-descent parser, error diagnostics | Pending |
-| **5** | Optimization: Dead-Code Elimination (DCE), Constant Folding, Algebraic Simplification | Pending |
+| **5** | Optimization: Dead-Code Elimination (DCE), Constant Folding, Algebraic Simplification | **Complete (DCE)** |
 | **6** | Optimization: Common Subexpression Elimination (CSE) | Pending |
 | **7** | Optimization: Elementwise and MatMul epilogue kernel fusion | Pending |
 | **8** | CPU Reference Interpreter: execution oracle for test validation | **Complete** |

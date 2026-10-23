@@ -66,3 +66,16 @@ target_link_libraries(tinytensor_cpu_reference_test
 )
 
 gtest_discover_tests(tinytensor_cpu_reference_test)
+
+add_executable(tinytensor_dce_test
+  dce_test.cpp
+)
+
+target_link_libraries(tinytensor_dce_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_dce_test)

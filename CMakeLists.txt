@@ -109,6 +109,8 @@ add_library(tinytensor
   src/ir.cpp
   src/ir/verifier.cpp
   src/runtime/cpu_reference.cpp
+  src/pass.cpp
+  src/passes/dce.cpp
 )
 
 target_link_libraries(tinytensor
