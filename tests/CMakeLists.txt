@@ -40,3 +40,16 @@ target_link_libraries(tinytensor_ir_test
 )
 
 gtest_discover_tests(tinytensor_ir_test)
+
+add_executable(tinytensor_verifier_test
+  verifier_test.cpp
+)
+
+target_link_libraries(tinytensor_verifier_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_verifier_test)

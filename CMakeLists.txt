@@ -107,6 +107,7 @@ message(STATUS "========================================================")
 add_library(tinytensor
   src/tinytensor.cpp
   src/ir.cpp
+  src/ir/verifier.cpp
 )
 
 target_link_libraries(tinytensor
