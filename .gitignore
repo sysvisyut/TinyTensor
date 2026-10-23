@@ -6,6 +6,7 @@ CMakeUserPresets.json
 compile_commands.json
 
 # IDE / Editor artifacts
+.cache/
 .vscode/
 .idea/
 *.swp

@@ -86,7 +86,7 @@ ctest --test-dir build --output-on-failure
 | Task | Description | Status |
 |---|---|---|
 | **0** | Project Setup, CMake, C++17, GoogleTest discovery, CPU-only configuration | **Complete** |
-| **1** | Core Tensor IR (`api_contracts.md`), Module, Value, Instruction, Canonical Printer | Pending |
+| **1** | Core Tensor IR (`api_contracts.md`), Module, Value, Instruction, Canonical Printer | **Complete** |
 | **2** | IR Verifier: type/shape checks, use-def invariants, broadcast legality | Pending |
 | **3** | Pass Manager: sequential pipeline, verification hooks, dirty tracking | Pending |
 | **4** | Frontend DSL: Lexer, recursive-descent parser, error diagnostics | Pending |

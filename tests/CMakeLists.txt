@@ -27,3 +27,16 @@ target_link_libraries(tinytensor_placeholder_test
 )
 
 gtest_discover_tests(tinytensor_placeholder_test)
+
+add_executable(tinytensor_ir_test
+  ir_test.cpp
+)
+
+target_link_libraries(tinytensor_ir_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_ir_test)

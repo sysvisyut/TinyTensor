@@ -106,6 +106,7 @@ message(STATUS "========================================================")
 # -----------------------------------------------------------------------------
 add_library(tinytensor
   src/tinytensor.cpp
+  src/ir.cpp
 )
 
 target_link_libraries(tinytensor
