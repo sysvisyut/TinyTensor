@@ -110,6 +110,37 @@ Instruction& Module::addInstruction(Op op, std::vector<Value*> operands,
   return *inst_ptr;
 }
 
+Instruction& Module::insertInstructionBefore(const Instruction& before, Op op,
+                                             std::vector<Value*> operands,
+                                             TensorType result_type,
+                                             std::string result_name) {
+  auto it = std::find_if(instructions_.begin(), instructions_.end(),
+                         [&](const std::unique_ptr<Instruction>& item) {
+                           return item.get() == &before;
+                         });
+  if (it == instructions_.end()) {
+    throw std::invalid_argument("Module::insertInstructionBefore: 'before' instruction not found");
+  }
+
+  Value::Id id = next_value_id_++;
+  auto result_val = std::make_unique<Value>(id, std::move(result_type), std::move(result_name), nullptr);
+  Value* result_ptr = result_val.get();
+  values_.push_back(std::move(result_val));
+
+  auto inst = std::make_unique<Instruction>(op, std::move(operands), result_ptr);
+  Instruction* inst_ptr = inst.get();
+  result_ptr->defining_inst_ = inst_ptr;
+
+  for (Value* opnd : inst_ptr->operands()) {
+    if (opnd) {
+      opnd->addUser(inst_ptr);
+    }
+  }
+
+  instructions_.insert(it, std::move(inst));
+  return *inst_ptr;
+}
+
 void Module::addOutput(Value& value) {
   value.is_output_ = true;
   outputs_.push_back(&value);

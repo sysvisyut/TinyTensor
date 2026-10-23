@@ -92,7 +92,7 @@ ctest --test-dir build --output-on-failure
 | **4** | Frontend DSL: Lexer, recursive-descent parser, error diagnostics | Pending |
 | **5** | Optimization: Dead-Code Elimination (DCE), Constant Folding, Algebraic Simplification | **Complete (DCE)** |
 | **6** | Optimization: Common Subexpression Elimination (CSE) | Pending |
-| **7** | Optimization: Elementwise and MatMul epilogue kernel fusion | Pending |
+| **7** | Optimization: Elementwise and MatMul epilogue kernel fusion | **Complete (MatMul Epilogue)** |
 | **8** | CPU Reference Interpreter: execution oracle for test validation | **Complete** |
 | **9** | Backend: LLVM NVPTX target setup and index-write smoke test | Pending |
 | **10** | Runtime: CUDA Driver API wrapper (memory, module load, kernel launch) | Pending |

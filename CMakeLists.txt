@@ -111,6 +111,7 @@ add_library(tinytensor
   src/runtime/cpu_reference.cpp
   src/pass.cpp
   src/passes/dce.cpp
+  src/passes/fusion.cpp
 )
 
 target_link_libraries(tinytensor
