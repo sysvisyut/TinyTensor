@@ -1,0 +1,77 @@
+{
+  "tests": 13,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "FusionTest",
+      "tests": 13,
+      "testsuite": [
+        {
+          "name": "FusibleMatMulBiasReluCanonicalAndEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 9
+        },
+        {
+          "name": "DownstreamUseOrderingPreservesDominance",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 56
+        },
+        {
+          "name": "RejectSharedProducerWithOutsideConsumer",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 110
+        },
+        {
+          "name": "RejectIntermediateOutput",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 141
+        },
+        {
+          "name": "RejectIncompatibleBiasShape",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 171
+        },
+        {
+          "name": "CPUEquivalenceNumericalAccuracy",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 190
+        },
+        {
+          "name": "FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 233
+        },
+        {
+          "name": "FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 271
+        },
+        {
+          "name": "FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 313
+        },
+        {
+          "name": "FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 358
+        },
+        {
+          "name": "RejectElementwiseSharedProducerMulAddSub",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 404
+        },
+        {
+          "name": "RejectElementwiseIntermediateOutput",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 434
+        },
+        {
+          "name": "ElementwiseDownstreamConsumerPreservesDominance",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/fusion_test.cpp",
+          "line": 459
+        }
+      ]
+    }
+  ]
+}

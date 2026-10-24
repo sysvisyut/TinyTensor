@@ -1,0 +1,38 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "CUDADriverFallbackTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "UnavailableInCpuOnlyBuild",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cuda_integration_test.cpp",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "name": "CUDAIntegrationTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "VectorAddF32EndToEnd",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cuda_integration_test.cpp",
+          "line": 37
+        },
+        {
+          "name": "MalformedPTXThrowsWithJITDiagnostics",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cuda_integration_test.cpp",
+          "line": 134
+        },
+        {
+          "name": "NonexistentKernelNameThrows",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cuda_integration_test.cpp",
+          "line": 159
+        }
+      ]
+    }
+  ]
+}

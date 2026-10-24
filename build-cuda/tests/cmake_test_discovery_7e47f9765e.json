@@ -1,0 +1,52 @@
+{
+  "tests": 8,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "CPUReferenceTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "ElementwiseUnaryAndBinary",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 18
+        },
+        {
+          "name": "ActivationReluAndExp",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 83
+        },
+        {
+          "name": "ScalarAndRank1TrailingBroadcast",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 110
+        },
+        {
+          "name": "NonSquareMatMulAndBoundaryShapes",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 145
+        },
+        {
+          "name": "MatMulBoundary1x1AndVectorShapes",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 182
+        },
+        {
+          "name": "NonSquareMatMul17x19x23",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 200
+        },
+        {
+          "name": "BaselineEndToEndMatMulAddRelu",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 247
+        },
+        {
+          "name": "FailureCasesMissingOrMismatchedInputs",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/cpu_reference_test.cpp",
+          "line": 279
+        }
+      ]
+    }
+  ]
+}

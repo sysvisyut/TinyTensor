@@ -1,0 +1,47 @@
+{
+  "tests": 7,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "IRTest",
+      "tests": 7,
+      "testsuite": [
+        {
+          "name": "BaselineMatMulAddReluAndCanonicalPrint",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 6
+        },
+        {
+          "name": "EraseInstructionPreservesLiveIDsAndReciprocalLinks",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 94
+        },
+        {
+          "name": "EraseSafetyRejectsLiveOrOutputInstructions",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 141
+        },
+        {
+          "name": "ReplaceAllUsesWithUpdatesOperandsAndOutputs",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 159
+        },
+        {
+          "name": "OperandMultiplicityAndSetOperand",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 190
+        },
+        {
+          "name": "InvalidShapeAndMatMulChecks",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 216
+        },
+        {
+          "name": "ConstantsAndScalarBroadcasting",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/ir_test.cpp",
+          "line": 235
+        }
+      ]
+    }
+  ]
+}

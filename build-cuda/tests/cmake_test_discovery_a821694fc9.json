@@ -1,0 +1,42 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "NVPTXSmokeTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "TargetInitializationAndSupport",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 30
+        },
+        {
+          "name": "TargetMachineCreationRejectsInvalidTriple",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 37
+        },
+        {
+          "name": "EmitSmokeTestModuleVerification",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 42
+        },
+        {
+          "name": "EmitPTXAssemblyVerification",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 88
+        },
+        {
+          "name": "VerifyModuleCatchesDeliberatelyMalformedModule",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 124
+        },
+        {
+          "name": "SaveArtifactHelper",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/nvptx_smoke_test.cpp",
+          "line": 148
+        }
+      ]
+    }
+  ]
+}

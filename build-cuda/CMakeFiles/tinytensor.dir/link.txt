@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtinytensor.a CMakeFiles/tinytensor.dir/src/tinytensor.cpp.o CMakeFiles/tinytensor.dir/src/ir.cpp.o CMakeFiles/tinytensor.dir/src/ir/verifier.cpp.o CMakeFiles/tinytensor.dir/src/runtime/cpu_reference.cpp.o CMakeFiles/tinytensor.dir/src/runtime/cuda_driver.cpp.o CMakeFiles/tinytensor.dir/src/pass.cpp.o CMakeFiles/tinytensor.dir/src/passes/dce.cpp.o CMakeFiles/tinytensor.dir/src/passes/fusion.cpp.o CMakeFiles/tinytensor.dir/src/backend/nvptx_target.cpp.o
+/usr/bin/ranlib libtinytensor.a

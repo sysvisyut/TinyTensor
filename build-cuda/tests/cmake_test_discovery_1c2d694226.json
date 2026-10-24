@@ -1,0 +1,42 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "DCETest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "CanonicalBaselineDCEAndSemanticEquivalence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 9
+        },
+        {
+          "name": "DeadChainRemoval",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 84
+        },
+        {
+          "name": "MultipleIndependentLiveOutputs",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 121
+        },
+        {
+          "name": "RetainSharedProducerWithLiveConsumer",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 160
+        },
+        {
+          "name": "NoOpIdempotencyAndConvergence",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 190
+        },
+        {
+          "name": "PassManagerRunsDCEAndCatchesCorruptPass",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/dce_test.cpp",
+          "line": 208
+        }
+      ]
+    }
+  ]
+}

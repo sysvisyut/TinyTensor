@@ -1,0 +1,3 @@
+58:CUDAIntegrationTest.VectorAddF32EndToEnd
+59:CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+60:CUDAIntegrationTest.NonexistentKernelNameThrows

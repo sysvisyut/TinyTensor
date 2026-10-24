@@ -1,0 +1,22 @@
+{
+  "tests": 2,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "TinyTensorSanityTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "VersionString",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/placeholder_test.cpp",
+          "line": 6
+        },
+        {
+          "name": "Cpp17FeaturesAvailable",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/placeholder_test.cpp",
+          "line": 10
+        }
+      ]
+    }
+  ]
+}

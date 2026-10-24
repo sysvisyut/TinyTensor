@@ -1,0 +1,1641 @@
+Start testing: Oct 24 21:42 IST
+----------------------------------------------------------
+1/60 Testing: TinyTensorSanityTest.VersionString
+1/60 Test: TinyTensorSanityTest.VersionString
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_placeholder_test" "--gtest_filter=TinyTensorSanityTest.VersionString" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"TinyTensorSanityTest.VersionString" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TinyTensorSanityTest.VersionString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TinyTensorSanityTest
+[ RUN      ] TinyTensorSanityTest.VersionString
+[       OK ] TinyTensorSanityTest.VersionString (0 ms)
+[----------] 1 test from TinyTensorSanityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TinyTensorSanityTest.VersionString" end time: Oct 24 21:42 IST
+"TinyTensorSanityTest.VersionString" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/60 Testing: TinyTensorSanityTest.Cpp17FeaturesAvailable
+2/60 Test: TinyTensorSanityTest.Cpp17FeaturesAvailable
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_placeholder_test" "--gtest_filter=TinyTensorSanityTest.Cpp17FeaturesAvailable" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"TinyTensorSanityTest.Cpp17FeaturesAvailable" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TinyTensorSanityTest.Cpp17FeaturesAvailable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TinyTensorSanityTest
+[ RUN      ] TinyTensorSanityTest.Cpp17FeaturesAvailable
+[       OK ] TinyTensorSanityTest.Cpp17FeaturesAvailable (0 ms)
+[----------] 1 test from TinyTensorSanityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TinyTensorSanityTest.Cpp17FeaturesAvailable" end time: Oct 24 21:42 IST
+"TinyTensorSanityTest.Cpp17FeaturesAvailable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/60 Testing: IRTest.BaselineMatMulAddReluAndCanonicalPrint
+3/60 Test: IRTest.BaselineMatMulAddReluAndCanonicalPrint
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.BaselineMatMulAddReluAndCanonicalPrint" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.BaselineMatMulAddReluAndCanonicalPrint" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.BaselineMatMulAddReluAndCanonicalPrint
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.BaselineMatMulAddReluAndCanonicalPrint
+[       OK ] IRTest.BaselineMatMulAddReluAndCanonicalPrint (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.BaselineMatMulAddReluAndCanonicalPrint" end time: Oct 24 21:42 IST
+"IRTest.BaselineMatMulAddReluAndCanonicalPrint" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/60 Testing: IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks
+4/60 Test: IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks
+[       OK ] IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks" end time: Oct 24 21:42 IST
+"IRTest.EraseInstructionPreservesLiveIDsAndReciprocalLinks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/60 Testing: IRTest.EraseSafetyRejectsLiveOrOutputInstructions
+5/60 Test: IRTest.EraseSafetyRejectsLiveOrOutputInstructions
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.EraseSafetyRejectsLiveOrOutputInstructions" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.EraseSafetyRejectsLiveOrOutputInstructions" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.EraseSafetyRejectsLiveOrOutputInstructions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.EraseSafetyRejectsLiveOrOutputInstructions
+[       OK ] IRTest.EraseSafetyRejectsLiveOrOutputInstructions (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.EraseSafetyRejectsLiveOrOutputInstructions" end time: Oct 24 21:42 IST
+"IRTest.EraseSafetyRejectsLiveOrOutputInstructions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/60 Testing: IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs
+6/60 Test: IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs
+[       OK ] IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs" end time: Oct 24 21:42 IST
+"IRTest.ReplaceAllUsesWithUpdatesOperandsAndOutputs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/60 Testing: IRTest.OperandMultiplicityAndSetOperand
+7/60 Test: IRTest.OperandMultiplicityAndSetOperand
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.OperandMultiplicityAndSetOperand" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.OperandMultiplicityAndSetOperand" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.OperandMultiplicityAndSetOperand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.OperandMultiplicityAndSetOperand
+[       OK ] IRTest.OperandMultiplicityAndSetOperand (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.OperandMultiplicityAndSetOperand" end time: Oct 24 21:42 IST
+"IRTest.OperandMultiplicityAndSetOperand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/60 Testing: IRTest.InvalidShapeAndMatMulChecks
+8/60 Test: IRTest.InvalidShapeAndMatMulChecks
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.InvalidShapeAndMatMulChecks" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.InvalidShapeAndMatMulChecks" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.InvalidShapeAndMatMulChecks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.InvalidShapeAndMatMulChecks
+[       OK ] IRTest.InvalidShapeAndMatMulChecks (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.InvalidShapeAndMatMulChecks" end time: Oct 24 21:42 IST
+"IRTest.InvalidShapeAndMatMulChecks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/60 Testing: IRTest.ConstantsAndScalarBroadcasting
+9/60 Test: IRTest.ConstantsAndScalarBroadcasting
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_ir_test" "--gtest_filter=IRTest.ConstantsAndScalarBroadcasting" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"IRTest.ConstantsAndScalarBroadcasting" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = IRTest.ConstantsAndScalarBroadcasting
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from IRTest
+[ RUN      ] IRTest.ConstantsAndScalarBroadcasting
+[       OK ] IRTest.ConstantsAndScalarBroadcasting (0 ms)
+[----------] 1 test from IRTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"IRTest.ConstantsAndScalarBroadcasting" end time: Oct 24 21:42 IST
+"IRTest.ConstantsAndScalarBroadcasting" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/60 Testing: VerifierTest.ValidBaselineMatMulAddReluModule
+10/60 Test: VerifierTest.ValidBaselineMatMulAddReluModule
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.ValidBaselineMatMulAddReluModule" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.ValidBaselineMatMulAddReluModule" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.ValidBaselineMatMulAddReluModule
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.ValidBaselineMatMulAddReluModule
+[       OK ] VerifierTest.ValidBaselineMatMulAddReluModule (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.ValidBaselineMatMulAddReluModule" end time: Oct 24 21:42 IST
+"VerifierTest.ValidBaselineMatMulAddReluModule" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/60 Testing: VerifierTest.RejectOperandDefinedAfterUseDominanceViolation
+11/60 Test: VerifierTest.RejectOperandDefinedAfterUseDominanceViolation
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectOperandDefinedAfterUseDominanceViolation" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectOperandDefinedAfterUseDominanceViolation" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectOperandDefinedAfterUseDominanceViolation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectOperandDefinedAfterUseDominanceViolation
+[       OK ] VerifierTest.RejectOperandDefinedAfterUseDominanceViolation (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectOperandDefinedAfterUseDominanceViolation" end time: Oct 24 21:42 IST
+"VerifierTest.RejectOperandDefinedAfterUseDominanceViolation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/60 Testing: VerifierTest.RejectForeignOrUndefinedOperand
+12/60 Test: VerifierTest.RejectForeignOrUndefinedOperand
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectForeignOrUndefinedOperand" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectForeignOrUndefinedOperand" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectForeignOrUndefinedOperand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectForeignOrUndefinedOperand
+[       OK ] VerifierTest.RejectForeignOrUndefinedOperand (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectForeignOrUndefinedOperand" end time: Oct 24 21:42 IST
+"VerifierTest.RejectForeignOrUndefinedOperand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/60 Testing: VerifierTest.RejectForeignOutput
+13/60 Test: VerifierTest.RejectForeignOutput
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectForeignOutput" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectForeignOutput" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectForeignOutput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectForeignOutput
+[       OK ] VerifierTest.RejectForeignOutput (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectForeignOutput" end time: Oct 24 21:42 IST
+"VerifierTest.RejectForeignOutput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/60 Testing: VerifierTest.RejectInvalidOperationArity
+14/60 Test: VerifierTest.RejectInvalidOperationArity
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectInvalidOperationArity" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectInvalidOperationArity" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectInvalidOperationArity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectInvalidOperationArity
+[       OK ] VerifierTest.RejectInvalidOperationArity (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectInvalidOperationArity" end time: Oct 24 21:42 IST
+"VerifierTest.RejectInvalidOperationArity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/60 Testing: VerifierTest.RejectIncompatibleMatMulShapes
+15/60 Test: VerifierTest.RejectIncompatibleMatMulShapes
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectIncompatibleMatMulShapes" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectIncompatibleMatMulShapes" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectIncompatibleMatMulShapes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectIncompatibleMatMulShapes
+[       OK ] VerifierTest.RejectIncompatibleMatMulShapes (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectIncompatibleMatMulShapes" end time: Oct 24 21:42 IST
+"VerifierTest.RejectIncompatibleMatMulShapes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/60 Testing: VerifierTest.RejectIncompatibleBinaryBroadcastShapes
+16/60 Test: VerifierTest.RejectIncompatibleBinaryBroadcastShapes
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectIncompatibleBinaryBroadcastShapes" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectIncompatibleBinaryBroadcastShapes" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectIncompatibleBinaryBroadcastShapes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectIncompatibleBinaryBroadcastShapes
+[       OK ] VerifierTest.RejectIncompatibleBinaryBroadcastShapes (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectIncompatibleBinaryBroadcastShapes" end time: Oct 24 21:42 IST
+"VerifierTest.RejectIncompatibleBinaryBroadcastShapes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/60 Testing: VerifierTest.RejectReciprocalUseDefMismatch
+17/60 Test: VerifierTest.RejectReciprocalUseDefMismatch
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectReciprocalUseDefMismatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectReciprocalUseDefMismatch" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectReciprocalUseDefMismatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectReciprocalUseDefMismatch
+[       OK ] VerifierTest.RejectReciprocalUseDefMismatch (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectReciprocalUseDefMismatch" end time: Oct 24 21:42 IST
+"VerifierTest.RejectReciprocalUseDefMismatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/60 Testing: VerifierTest.RejectIllegalOpcodeInstruction
+18/60 Test: VerifierTest.RejectIllegalOpcodeInstruction
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectIllegalOpcodeInstruction" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectIllegalOpcodeInstruction" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectIllegalOpcodeInstruction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectIllegalOpcodeInstruction
+[       OK ] VerifierTest.RejectIllegalOpcodeInstruction (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectIllegalOpcodeInstruction" end time: Oct 24 21:42 IST
+"VerifierTest.RejectIllegalOpcodeInstruction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/60 Testing: VerifierTest.RejectFusedElementwiseMissingPayload
+19/60 Test: VerifierTest.RejectFusedElementwiseMissingPayload
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectFusedElementwiseMissingPayload" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectFusedElementwiseMissingPayload" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectFusedElementwiseMissingPayload
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectFusedElementwiseMissingPayload
+[       OK ] VerifierTest.RejectFusedElementwiseMissingPayload (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectFusedElementwiseMissingPayload" end time: Oct 24 21:42 IST
+"VerifierTest.RejectFusedElementwiseMissingPayload" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/60 Testing: VerifierTest.RejectFusedElementwiseOperandCountMismatch
+20/60 Test: VerifierTest.RejectFusedElementwiseOperandCountMismatch
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectFusedElementwiseOperandCountMismatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectFusedElementwiseOperandCountMismatch" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectFusedElementwiseOperandCountMismatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectFusedElementwiseOperandCountMismatch
+[       OK ] VerifierTest.RejectFusedElementwiseOperandCountMismatch (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectFusedElementwiseOperandCountMismatch" end time: Oct 24 21:42 IST
+"VerifierTest.RejectFusedElementwiseOperandCountMismatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/60 Testing: VerifierTest.RejectFusedElementwiseOperandMismatch
+21/60 Test: VerifierTest.RejectFusedElementwiseOperandMismatch
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectFusedElementwiseOperandMismatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectFusedElementwiseOperandMismatch" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectFusedElementwiseOperandMismatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectFusedElementwiseOperandMismatch
+[       OK ] VerifierTest.RejectFusedElementwiseOperandMismatch (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectFusedElementwiseOperandMismatch" end time: Oct 24 21:42 IST
+"VerifierTest.RejectFusedElementwiseOperandMismatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/60 Testing: VerifierTest.RejectFusedElementwiseEmptyInternalOps
+22/60 Test: VerifierTest.RejectFusedElementwiseEmptyInternalOps
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectFusedElementwiseEmptyInternalOps" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectFusedElementwiseEmptyInternalOps" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectFusedElementwiseEmptyInternalOps
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectFusedElementwiseEmptyInternalOps
+[       OK ] VerifierTest.RejectFusedElementwiseEmptyInternalOps (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectFusedElementwiseEmptyInternalOps" end time: Oct 24 21:42 IST
+"VerifierTest.RejectFusedElementwiseEmptyInternalOps" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/60 Testing: VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange
+23/60 Test: VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_verifier_test" "--gtest_filter=VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VerifierTest
+[ RUN      ] VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange
+[       OK ] VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange (0 ms)
+[----------] 1 test from VerifierTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange" end time: Oct 24 21:42 IST
+"VerifierTest.RejectFusedElementwiseOperandIndexOutOfRange" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/60 Testing: CPUReferenceTest.ElementwiseUnaryAndBinary
+24/60 Test: CPUReferenceTest.ElementwiseUnaryAndBinary
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.ElementwiseUnaryAndBinary" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.ElementwiseUnaryAndBinary" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.ElementwiseUnaryAndBinary
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.ElementwiseUnaryAndBinary
+[       OK ] CPUReferenceTest.ElementwiseUnaryAndBinary (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.ElementwiseUnaryAndBinary" end time: Oct 24 21:42 IST
+"CPUReferenceTest.ElementwiseUnaryAndBinary" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/60 Testing: CPUReferenceTest.ActivationReluAndExp
+25/60 Test: CPUReferenceTest.ActivationReluAndExp
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.ActivationReluAndExp" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.ActivationReluAndExp" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.ActivationReluAndExp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.ActivationReluAndExp
+[       OK ] CPUReferenceTest.ActivationReluAndExp (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.ActivationReluAndExp" end time: Oct 24 21:42 IST
+"CPUReferenceTest.ActivationReluAndExp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/60 Testing: CPUReferenceTest.ScalarAndRank1TrailingBroadcast
+26/60 Test: CPUReferenceTest.ScalarAndRank1TrailingBroadcast
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.ScalarAndRank1TrailingBroadcast" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.ScalarAndRank1TrailingBroadcast" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.ScalarAndRank1TrailingBroadcast
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.ScalarAndRank1TrailingBroadcast
+[       OK ] CPUReferenceTest.ScalarAndRank1TrailingBroadcast (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.ScalarAndRank1TrailingBroadcast" end time: Oct 24 21:42 IST
+"CPUReferenceTest.ScalarAndRank1TrailingBroadcast" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/60 Testing: CPUReferenceTest.NonSquareMatMulAndBoundaryShapes
+27/60 Test: CPUReferenceTest.NonSquareMatMulAndBoundaryShapes
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.NonSquareMatMulAndBoundaryShapes" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.NonSquareMatMulAndBoundaryShapes" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.NonSquareMatMulAndBoundaryShapes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.NonSquareMatMulAndBoundaryShapes
+[       OK ] CPUReferenceTest.NonSquareMatMulAndBoundaryShapes (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.NonSquareMatMulAndBoundaryShapes" end time: Oct 24 21:42 IST
+"CPUReferenceTest.NonSquareMatMulAndBoundaryShapes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/60 Testing: CPUReferenceTest.MatMulBoundary1x1AndVectorShapes
+28/60 Test: CPUReferenceTest.MatMulBoundary1x1AndVectorShapes
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.MatMulBoundary1x1AndVectorShapes" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.MatMulBoundary1x1AndVectorShapes" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.MatMulBoundary1x1AndVectorShapes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.MatMulBoundary1x1AndVectorShapes
+[       OK ] CPUReferenceTest.MatMulBoundary1x1AndVectorShapes (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.MatMulBoundary1x1AndVectorShapes" end time: Oct 24 21:42 IST
+"CPUReferenceTest.MatMulBoundary1x1AndVectorShapes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/60 Testing: CPUReferenceTest.NonSquareMatMul17x19x23
+29/60 Test: CPUReferenceTest.NonSquareMatMul17x19x23
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.NonSquareMatMul17x19x23" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.NonSquareMatMul17x19x23" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.NonSquareMatMul17x19x23
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.NonSquareMatMul17x19x23
+[       OK ] CPUReferenceTest.NonSquareMatMul17x19x23 (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.NonSquareMatMul17x19x23" end time: Oct 24 21:42 IST
+"CPUReferenceTest.NonSquareMatMul17x19x23" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/60 Testing: CPUReferenceTest.BaselineEndToEndMatMulAddRelu
+30/60 Test: CPUReferenceTest.BaselineEndToEndMatMulAddRelu
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.BaselineEndToEndMatMulAddRelu" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.BaselineEndToEndMatMulAddRelu" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.BaselineEndToEndMatMulAddRelu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.BaselineEndToEndMatMulAddRelu
+[       OK ] CPUReferenceTest.BaselineEndToEndMatMulAddRelu (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.BaselineEndToEndMatMulAddRelu" end time: Oct 24 21:42 IST
+"CPUReferenceTest.BaselineEndToEndMatMulAddRelu" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/60 Testing: CPUReferenceTest.FailureCasesMissingOrMismatchedInputs
+31/60 Test: CPUReferenceTest.FailureCasesMissingOrMismatchedInputs
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cpu_reference_test" "--gtest_filter=CPUReferenceTest.FailureCasesMissingOrMismatchedInputs" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CPUReferenceTest.FailureCasesMissingOrMismatchedInputs" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CPUReferenceTest.FailureCasesMissingOrMismatchedInputs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CPUReferenceTest
+[ RUN      ] CPUReferenceTest.FailureCasesMissingOrMismatchedInputs
+[       OK ] CPUReferenceTest.FailureCasesMissingOrMismatchedInputs (0 ms)
+[----------] 1 test from CPUReferenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CPUReferenceTest.FailureCasesMissingOrMismatchedInputs" end time: Oct 24 21:42 IST
+"CPUReferenceTest.FailureCasesMissingOrMismatchedInputs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/60 Testing: DCETest.CanonicalBaselineDCEAndSemanticEquivalence
+32/60 Test: DCETest.CanonicalBaselineDCEAndSemanticEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.CanonicalBaselineDCEAndSemanticEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.CanonicalBaselineDCEAndSemanticEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.CanonicalBaselineDCEAndSemanticEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.CanonicalBaselineDCEAndSemanticEquivalence
+[       OK ] DCETest.CanonicalBaselineDCEAndSemanticEquivalence (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.CanonicalBaselineDCEAndSemanticEquivalence" end time: Oct 24 21:42 IST
+"DCETest.CanonicalBaselineDCEAndSemanticEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/60 Testing: DCETest.DeadChainRemoval
+33/60 Test: DCETest.DeadChainRemoval
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.DeadChainRemoval" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.DeadChainRemoval" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.DeadChainRemoval
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.DeadChainRemoval
+[       OK ] DCETest.DeadChainRemoval (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.DeadChainRemoval" end time: Oct 24 21:42 IST
+"DCETest.DeadChainRemoval" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/60 Testing: DCETest.MultipleIndependentLiveOutputs
+34/60 Test: DCETest.MultipleIndependentLiveOutputs
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.MultipleIndependentLiveOutputs" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.MultipleIndependentLiveOutputs" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.MultipleIndependentLiveOutputs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.MultipleIndependentLiveOutputs
+[       OK ] DCETest.MultipleIndependentLiveOutputs (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.MultipleIndependentLiveOutputs" end time: Oct 24 21:42 IST
+"DCETest.MultipleIndependentLiveOutputs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/60 Testing: DCETest.RetainSharedProducerWithLiveConsumer
+35/60 Test: DCETest.RetainSharedProducerWithLiveConsumer
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.RetainSharedProducerWithLiveConsumer" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.RetainSharedProducerWithLiveConsumer" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.RetainSharedProducerWithLiveConsumer
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.RetainSharedProducerWithLiveConsumer
+[       OK ] DCETest.RetainSharedProducerWithLiveConsumer (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.RetainSharedProducerWithLiveConsumer" end time: Oct 24 21:42 IST
+"DCETest.RetainSharedProducerWithLiveConsumer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/60 Testing: DCETest.NoOpIdempotencyAndConvergence
+36/60 Test: DCETest.NoOpIdempotencyAndConvergence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.NoOpIdempotencyAndConvergence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.NoOpIdempotencyAndConvergence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.NoOpIdempotencyAndConvergence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.NoOpIdempotencyAndConvergence
+[       OK ] DCETest.NoOpIdempotencyAndConvergence (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.NoOpIdempotencyAndConvergence" end time: Oct 24 21:42 IST
+"DCETest.NoOpIdempotencyAndConvergence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/60 Testing: DCETest.PassManagerRunsDCEAndCatchesCorruptPass
+37/60 Test: DCETest.PassManagerRunsDCEAndCatchesCorruptPass
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_dce_test" "--gtest_filter=DCETest.PassManagerRunsDCEAndCatchesCorruptPass" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"DCETest.PassManagerRunsDCEAndCatchesCorruptPass" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DCETest.PassManagerRunsDCEAndCatchesCorruptPass
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DCETest
+[ RUN      ] DCETest.PassManagerRunsDCEAndCatchesCorruptPass
+[       OK ] DCETest.PassManagerRunsDCEAndCatchesCorruptPass (0 ms)
+[----------] 1 test from DCETest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DCETest.PassManagerRunsDCEAndCatchesCorruptPass" end time: Oct 24 21:42 IST
+"DCETest.PassManagerRunsDCEAndCatchesCorruptPass" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/60 Testing: FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence
+38/60 Test: FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence
+[       OK ] FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence" end time: Oct 24 21:42 IST
+"FusionTest.FusibleMatMulBiasReluCanonicalAndEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/60 Testing: FusionTest.DownstreamUseOrderingPreservesDominance
+39/60 Test: FusionTest.DownstreamUseOrderingPreservesDominance
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.DownstreamUseOrderingPreservesDominance" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.DownstreamUseOrderingPreservesDominance" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.DownstreamUseOrderingPreservesDominance
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.DownstreamUseOrderingPreservesDominance
+[       OK ] FusionTest.DownstreamUseOrderingPreservesDominance (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.DownstreamUseOrderingPreservesDominance" end time: Oct 24 21:42 IST
+"FusionTest.DownstreamUseOrderingPreservesDominance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/60 Testing: FusionTest.RejectSharedProducerWithOutsideConsumer
+40/60 Test: FusionTest.RejectSharedProducerWithOutsideConsumer
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.RejectSharedProducerWithOutsideConsumer" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.RejectSharedProducerWithOutsideConsumer" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.RejectSharedProducerWithOutsideConsumer
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.RejectSharedProducerWithOutsideConsumer
+[       OK ] FusionTest.RejectSharedProducerWithOutsideConsumer (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.RejectSharedProducerWithOutsideConsumer" end time: Oct 24 21:42 IST
+"FusionTest.RejectSharedProducerWithOutsideConsumer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/60 Testing: FusionTest.RejectIntermediateOutput
+41/60 Test: FusionTest.RejectIntermediateOutput
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.RejectIntermediateOutput" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.RejectIntermediateOutput" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.RejectIntermediateOutput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.RejectIntermediateOutput
+[       OK ] FusionTest.RejectIntermediateOutput (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.RejectIntermediateOutput" end time: Oct 24 21:42 IST
+"FusionTest.RejectIntermediateOutput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/60 Testing: FusionTest.RejectIncompatibleBiasShape
+42/60 Test: FusionTest.RejectIncompatibleBiasShape
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.RejectIncompatibleBiasShape" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.RejectIncompatibleBiasShape" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.RejectIncompatibleBiasShape
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.RejectIncompatibleBiasShape
+[       OK ] FusionTest.RejectIncompatibleBiasShape (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.RejectIncompatibleBiasShape" end time: Oct 24 21:42 IST
+"FusionTest.RejectIncompatibleBiasShape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/60 Testing: FusionTest.CPUEquivalenceNumericalAccuracy
+43/60 Test: FusionTest.CPUEquivalenceNumericalAccuracy
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.CPUEquivalenceNumericalAccuracy" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.CPUEquivalenceNumericalAccuracy" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.CPUEquivalenceNumericalAccuracy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.CPUEquivalenceNumericalAccuracy
+[       OK ] FusionTest.CPUEquivalenceNumericalAccuracy (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.CPUEquivalenceNumericalAccuracy" end time: Oct 24 21:42 IST
+"FusionTest.CPUEquivalenceNumericalAccuracy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/60 Testing: FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence
+44/60 Test: FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence
+[       OK ] FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence" end time: Oct 24 21:42 IST
+"FusionTest.FusibleElementwiseUnaryUnaryReluExpCanonicalAndEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/60 Testing: FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence
+45/60 Test: FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence
+[       OK ] FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence" end time: Oct 24 21:42 IST
+"FusionTest.FusibleElementwiseBinaryUnaryAddReluCanonicalAndEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/60 Testing: FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence
+46/60 Test: FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence
+[       OK ] FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence" end time: Oct 24 21:42 IST
+"FusionTest.FusibleElementwiseBinaryBinaryMulAddCanonicalAndEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/60 Testing: FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence
+47/60 Test: FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence
+[       OK ] FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence" end time: Oct 24 21:42 IST
+"FusionTest.FusibleElementwiseThreeOpMulAddReluCanonicalAndEquivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/60 Testing: FusionTest.RejectElementwiseSharedProducerMulAddSub
+48/60 Test: FusionTest.RejectElementwiseSharedProducerMulAddSub
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.RejectElementwiseSharedProducerMulAddSub" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.RejectElementwiseSharedProducerMulAddSub" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.RejectElementwiseSharedProducerMulAddSub
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.RejectElementwiseSharedProducerMulAddSub
+[       OK ] FusionTest.RejectElementwiseSharedProducerMulAddSub (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.RejectElementwiseSharedProducerMulAddSub" end time: Oct 24 21:42 IST
+"FusionTest.RejectElementwiseSharedProducerMulAddSub" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/60 Testing: FusionTest.RejectElementwiseIntermediateOutput
+49/60 Test: FusionTest.RejectElementwiseIntermediateOutput
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.RejectElementwiseIntermediateOutput" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.RejectElementwiseIntermediateOutput" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.RejectElementwiseIntermediateOutput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.RejectElementwiseIntermediateOutput
+[       OK ] FusionTest.RejectElementwiseIntermediateOutput (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.RejectElementwiseIntermediateOutput" end time: Oct 24 21:42 IST
+"FusionTest.RejectElementwiseIntermediateOutput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/60 Testing: FusionTest.ElementwiseDownstreamConsumerPreservesDominance
+50/60 Test: FusionTest.ElementwiseDownstreamConsumerPreservesDominance
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_fusion_test" "--gtest_filter=FusionTest.ElementwiseDownstreamConsumerPreservesDominance" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"FusionTest.ElementwiseDownstreamConsumerPreservesDominance" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FusionTest.ElementwiseDownstreamConsumerPreservesDominance
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FusionTest
+[ RUN      ] FusionTest.ElementwiseDownstreamConsumerPreservesDominance
+[       OK ] FusionTest.ElementwiseDownstreamConsumerPreservesDominance (0 ms)
+[----------] 1 test from FusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FusionTest.ElementwiseDownstreamConsumerPreservesDominance" end time: Oct 24 21:42 IST
+"FusionTest.ElementwiseDownstreamConsumerPreservesDominance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/60 Testing: NVPTXSmokeTest.TargetInitializationAndSupport
+51/60 Test: NVPTXSmokeTest.TargetInitializationAndSupport
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.TargetInitializationAndSupport" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.TargetInitializationAndSupport" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.TargetInitializationAndSupport
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.TargetInitializationAndSupport
+[       OK ] NVPTXSmokeTest.TargetInitializationAndSupport (5 ms)
+[----------] 1 test from NVPTXSmokeTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.TargetInitializationAndSupport" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.TargetInitializationAndSupport" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/60 Testing: NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple
+52/60 Test: NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple
+[       OK ] NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple (0 ms)
+[----------] 1 test from NVPTXSmokeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.TargetMachineCreationRejectsInvalidTriple" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/60 Testing: NVPTXSmokeTest.EmitSmokeTestModuleVerification
+53/60 Test: NVPTXSmokeTest.EmitSmokeTestModuleVerification
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.EmitSmokeTestModuleVerification" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.EmitSmokeTestModuleVerification" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.EmitSmokeTestModuleVerification
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.EmitSmokeTestModuleVerification
+[       OK ] NVPTXSmokeTest.EmitSmokeTestModuleVerification (11 ms)
+[----------] 1 test from NVPTXSmokeTest (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (11 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.EmitSmokeTestModuleVerification" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.EmitSmokeTestModuleVerification" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/60 Testing: NVPTXSmokeTest.EmitPTXAssemblyVerification
+54/60 Test: NVPTXSmokeTest.EmitPTXAssemblyVerification
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.EmitPTXAssemblyVerification" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.EmitPTXAssemblyVerification" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.EmitPTXAssemblyVerification
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.EmitPTXAssemblyVerification
+[       OK ] NVPTXSmokeTest.EmitPTXAssemblyVerification (48 ms)
+[----------] 1 test from NVPTXSmokeTest (48 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (48 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.EmitPTXAssemblyVerification" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.EmitPTXAssemblyVerification" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/60 Testing: NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule
+55/60 Test: NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule
+[       OK ] NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule (0 ms)
+[----------] 1 test from NVPTXSmokeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.VerifyModuleCatchesDeliberatelyMalformedModule" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/60 Testing: NVPTXSmokeTest.SaveArtifactHelper
+56/60 Test: NVPTXSmokeTest.SaveArtifactHelper
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test" "--gtest_filter=NVPTXSmokeTest.SaveArtifactHelper" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"NVPTXSmokeTest.SaveArtifactHelper" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NVPTXSmokeTest.SaveArtifactHelper
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NVPTXSmokeTest
+[ RUN      ] NVPTXSmokeTest.SaveArtifactHelper
+[       OK ] NVPTXSmokeTest.SaveArtifactHelper (0 ms)
+[----------] 1 test from NVPTXSmokeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NVPTXSmokeTest.SaveArtifactHelper" end time: Oct 24 21:42 IST
+"NVPTXSmokeTest.SaveArtifactHelper" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/60 Testing: CUDADriverFallbackTest.UnavailableInCpuOnlyBuild
+57/60 Test: CUDADriverFallbackTest.UnavailableInCpuOnlyBuild
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cuda_integration_test" "--gtest_filter=CUDADriverFallbackTest.UnavailableInCpuOnlyBuild" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CUDADriverFallbackTest.UnavailableInCpuOnlyBuild" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CUDADriverFallbackTest.UnavailableInCpuOnlyBuild
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDADriverFallbackTest
+[ RUN      ] CUDADriverFallbackTest.UnavailableInCpuOnlyBuild
+[       OK ] CUDADriverFallbackTest.UnavailableInCpuOnlyBuild (0 ms)
+[----------] 1 test from CUDADriverFallbackTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CUDADriverFallbackTest.UnavailableInCpuOnlyBuild" end time: Oct 24 21:42 IST
+"CUDADriverFallbackTest.UnavailableInCpuOnlyBuild" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/60 Testing: CUDAIntegrationTest.VectorAddF32EndToEnd
+58/60 Test: CUDAIntegrationTest.VectorAddF32EndToEnd
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cuda_integration_test" "--gtest_filter=CUDAIntegrationTest.VectorAddF32EndToEnd" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CUDAIntegrationTest.VectorAddF32EndToEnd" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAIntegrationTest.VectorAddF32EndToEnd
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAIntegrationTest
+[ RUN      ] CUDAIntegrationTest.VectorAddF32EndToEnd
+/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/tests/cuda_integration_test.cpp:39: Skipped
+CUDA GPU not available on this host. Skipping GPU execution test.
+
+[  SKIPPED ] CUDAIntegrationTest.VectorAddF32EndToEnd (0 ms)
+[----------] 1 test from CUDAIntegrationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] CUDAIntegrationTest.VectorAddF32EndToEnd
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Pass Reason:
+Skip regular expression found in output. Regex=[\[  SKIPPED \]]
+"CUDAIntegrationTest.VectorAddF32EndToEnd" end time: Oct 24 21:42 IST
+"CUDAIntegrationTest.VectorAddF32EndToEnd" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/60 Testing: CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+59/60 Test: CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cuda_integration_test" "--gtest_filter=CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAIntegrationTest
+[ RUN      ] CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/tests/cuda_integration_test.cpp:136: Skipped
+CUDA GPU not available on this host. Skipping GPU error test.
+
+[  SKIPPED ] CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics (0 ms)
+[----------] 1 test from CUDAIntegrationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Pass Reason:
+Skip regular expression found in output. Regex=[\[  SKIPPED \]]
+"CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics" end time: Oct 24 21:42 IST
+"CUDAIntegrationTest.MalformedPTXThrowsWithJITDiagnostics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/60 Testing: CUDAIntegrationTest.NonexistentKernelNameThrows
+60/60 Test: CUDAIntegrationTest.NonexistentKernelNameThrows
+Command: "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_cuda_integration_test" "--gtest_filter=CUDAIntegrationTest.NonexistentKernelNameThrows" "--gtest_also_run_disabled_tests"
+Directory: /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests
+"CUDAIntegrationTest.NonexistentKernelNameThrows" start time: Oct 24 21:42 IST
+Output:
+----------------------------------------------------------
+Running main() from /Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAIntegrationTest.NonexistentKernelNameThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAIntegrationTest
+[ RUN      ] CUDAIntegrationTest.NonexistentKernelNameThrows
+/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/tests/cuda_integration_test.cpp:161: Skipped
+CUDA GPU not available on this host. Skipping GPU error test.
+
+[  SKIPPED ] CUDAIntegrationTest.NonexistentKernelNameThrows (0 ms)
+[----------] 1 test from CUDAIntegrationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] CUDAIntegrationTest.NonexistentKernelNameThrows
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Pass Reason:
+Skip regular expression found in output. Regex=[\[  SKIPPED \]]
+"CUDAIntegrationTest.NonexistentKernelNameThrows" end time: Oct 24 21:42 IST
+"CUDAIntegrationTest.NonexistentKernelNameThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 24 21:42 IST

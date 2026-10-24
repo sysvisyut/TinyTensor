@@ -1,0 +1,5 @@
+if(EXISTS "/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test_e3b0c442_tests.cmake")
+  include("/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_nvptx_smoke_test_e3b0c442_tests.cmake")
+else()
+  add_test(tinytensor_nvptx_smoke_test_NOT_BUILT tinytensor_nvptx_smoke_test_NOT_BUILT)
+endif()

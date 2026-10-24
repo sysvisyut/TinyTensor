@@ -1,0 +1,20 @@
+include("/opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake")
+gtest_discover_tests_impl(
+  TEST_TARGET [==[tinytensor_placeholder_test]==]
+  TEST_EXECUTABLE [==[/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_placeholder_test]==]
+  TEST_EXECUTOR [==[]==]
+  TEST_WORKING_DIR [==[/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests]==]
+  TEST_EXTRA_ARGS [==[]==]
+  TEST_PROPERTIES [==[]==]
+  TEST_PREFIX [==[]==]
+  TEST_SUFFIX [==[]==]
+  TEST_FILTER [==[]==]
+  NO_PRETTY_TYPES [==[FALSE]==]
+  NO_PRETTY_VALUES [==[FALSE]==]
+  TEST_LIST [==[tinytensor_placeholder_test_TESTS]==]
+  CTEST_FILE [==[/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests/tinytensor_placeholder_test_e3b0c442_tests.cmake]==]
+  TEST_DISCOVERY_TIMEOUT [==[5]==]
+  TEST_DISCOVERY_EXTRA_ARGS [==[]==]
+  TEST_XML_OUTPUT_DIR [==[]==]
+  TEST_JSON_OUTPUT_DIR [==[/Users/sharvajvidyutgmail.com/Desktop/files/curriculum/projects/TinyTensor/build-cuda/tests]==]
+)

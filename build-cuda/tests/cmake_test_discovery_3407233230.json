@@ -1,0 +1,82 @@
+{
+  "tests": 14,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "VerifierTest",
+      "tests": 14,
+      "testsuite": [
+        {
+          "name": "ValidBaselineMatMulAddReluModule",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 7
+        },
+        {
+          "name": "RejectOperandDefinedAfterUseDominanceViolation",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 46
+        },
+        {
+          "name": "RejectForeignOrUndefinedOperand",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 68
+        },
+        {
+          "name": "RejectForeignOutput",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 89
+        },
+        {
+          "name": "RejectInvalidOperationArity",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 107
+        },
+        {
+          "name": "RejectIncompatibleMatMulShapes",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 119
+        },
+        {
+          "name": "RejectIncompatibleBinaryBroadcastShapes",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 133
+        },
+        {
+          "name": "RejectReciprocalUseDefMismatch",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 147
+        },
+        {
+          "name": "RejectIllegalOpcodeInstruction",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 166
+        },
+        {
+          "name": "RejectFusedElementwiseMissingPayload",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 177
+        },
+        {
+          "name": "RejectFusedElementwiseOperandCountMismatch",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 189
+        },
+        {
+          "name": "RejectFusedElementwiseOperandMismatch",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 211
+        },
+        {
+          "name": "RejectFusedElementwiseEmptyInternalOps",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 233
+        },
+        {
+          "name": "RejectFusedElementwiseOperandIndexOutOfRange",
+          "file": "\/Users\/sharvajvidyutgmail.com\/Desktop\/files\/curriculum\/projects\/TinyTensor\/tests\/verifier_test.cpp",
+          "line": 249
+        }
+      ]
+    }
+  ]
+}
