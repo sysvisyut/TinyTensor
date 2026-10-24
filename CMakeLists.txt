@@ -61,20 +61,16 @@ if(TINYTENSOR_ENABLE_LLVM)
 endif()
 
 # -----------------------------------------------------------------------------
-# Toolchain Discovery: CUDA
+# Toolchain Discovery: CUDA Driver API
 # -----------------------------------------------------------------------------
 set(TINYTENSOR_CUDA_FOUND FALSE)
 
 if(TINYTENSOR_ENABLE_CUDA)
-  include(CheckLanguage)
-  check_language(CUDA)
-  if(CMAKE_CUDA_COMPILER)
-    enable_language(CUDA)
-    find_package(CUDAToolkit QUIET)
+  find_package(CUDAToolkit QUIET)
+  if(CUDAToolkit_FOUND)
     set(TINYTENSOR_CUDA_FOUND TRUE)
   else()
-    message(WARNING "TINYTENSOR_ENABLE_CUDA=ON, but no CUDA compiler (nvcc) was found. Disabling CUDA runtime.")
-    set(TINYTENSOR_ENABLE_CUDA OFF)
+    message(STATUS "CUDA Toolkit / Driver API not found. Building in CPU-only mode.")
   endif()
 endif()
 
@@ -109,6 +105,7 @@ set(TINYTENSOR_SOURCES
   src/ir.cpp
   src/ir/verifier.cpp
   src/runtime/cpu_reference.cpp
+  src/runtime/cuda_driver.cpp
   src/pass.cpp
   src/passes/dce.cpp
   src/passes/fusion.cpp
@@ -143,6 +140,12 @@ if(TINYTENSOR_LLVM_FOUND)
     Support
   )
   target_link_libraries(tinytensor PUBLIC ${LLVM_TARGET_LIBS})
+endif()
+
+if(TINYTENSOR_CUDA_FOUND)
+  target_compile_definitions(tinytensor PUBLIC TINYTENSOR_HAS_CUDA=1)
+  target_include_directories(tinytensor SYSTEM PRIVATE ${CUDAToolkit_INCLUDE_DIRS})
+  target_link_libraries(tinytensor PRIVATE CUDA::cuda_driver)
 endif()
 
 # -----------------------------------------------------------------------------

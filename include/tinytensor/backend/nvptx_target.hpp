@@ -59,6 +59,15 @@ std::unique_ptr<llvm::Module> createSmokeTestModule(
     std::string_view moduleName = "tinytensor_smoke",
     std::string_view kernelName = "tiny_smoke");
 
+// Builds a vector addition kernel module:
+// Kernel signature: void vector_add(ptr addrspace(1) %out, ptr addrspace(1) %a, ptr addrspace(1) %b, i32 %n)
+// Computes out[i] = a[i] + b[i] guarded by if (idx < n).
+std::unique_ptr<llvm::Module> createVectorAddModule(
+    llvm::LLVMContext& ctx,
+    llvm::TargetMachine* targetMachine = nullptr,
+    std::string_view moduleName = "tinytensor_vector_add",
+    std::string_view kernelName = "vector_add");
+
 // Helper to save LLVM IR and PTX artifacts to disk on failure or for inspection.
 void saveArtifact(std::string_view filepath, std::string_view content);
 

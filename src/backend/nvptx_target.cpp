@@ -195,6 +195,77 @@ std::unique_ptr<llvm::Module> createSmokeTestModule(
   return mod;
 }
 
+std::unique_ptr<llvm::Module> createVectorAddModule(
+    llvm::LLVMContext& ctx,
+    llvm::TargetMachine* targetMachine,
+    std::string_view moduleName,
+    std::string_view kernelName) {
+  auto mod = std::make_unique<llvm::Module>(moduleName, ctx);
+  llvm::Triple triple("nvptx64-nvidia-cuda");
+  mod->setTargetTriple(triple);
+
+  if (targetMachine) {
+    mod->setDataLayout(targetMachine->createDataLayout());
+  }
+
+  auto* voidTy = llvm::Type::getVoidTy(ctx);
+  auto* f32Ty = llvm::Type::getFloatTy(ctx);
+  auto* i32Ty = llvm::Type::getInt32Ty(ctx);
+  auto* globalPtrTy = llvm::PointerType::get(ctx, /*AddressSpace=*/1);
+  // Signature: void vector_add(ptr addrspace(1) %out, ptr addrspace(1) %a, ptr addrspace(1) %b, i32 %n)
+  auto* fnTy = llvm::FunctionType::get(
+      voidTy, {globalPtrTy, globalPtrTy, globalPtrTy, i32Ty}, false);
+
+  auto* kernel = llvm::Function::Create(
+      fnTy, llvm::Function::ExternalLinkage, kernelName, *mod);
+  markAsNVPTXKernel(*mod, kernel);
+
+  auto* entryBB = llvm::BasicBlock::Create(ctx, "entry", kernel);
+  auto* doAddBB = llvm::BasicBlock::Create(ctx, "do_add", kernel);
+  auto* exitBB = llvm::BasicBlock::Create(ctx, "exit", kernel);
+
+  llvm::IRBuilder<> builder(entryBB);
+
+  auto* tidFn = llvm::Intrinsic::getOrInsertDeclaration(
+      mod.get(), llvm::Intrinsic::nvvm_read_ptx_sreg_tid_x);
+  auto* ctaidFn = llvm::Intrinsic::getOrInsertDeclaration(
+      mod.get(), llvm::Intrinsic::nvvm_read_ptx_sreg_ctaid_x);
+  auto* ntidFn = llvm::Intrinsic::getOrInsertDeclaration(
+      mod.get(), llvm::Intrinsic::nvvm_read_ptx_sreg_ntid_x);
+
+  llvm::Value* tid = builder.CreateCall(tidFn, {}, "tid.x");
+  llvm::Value* ctaid = builder.CreateCall(ctaidFn, {}, "ctaid.x");
+  llvm::Value* ntid = builder.CreateCall(ntidFn, {}, "ntid.x");
+
+  llvm::Value* blkOffset = builder.CreateMul(ctaid, ntid, "blk_offset");
+  llvm::Value* globalIdx = builder.CreateAdd(blkOffset, tid, "global_idx");
+
+  llvm::Value* nArg = kernel->getArg(3);
+  llvm::Value* inBounds = builder.CreateICmpSLT(globalIdx, nArg, "in_bounds");
+  builder.CreateCondBr(inBounds, doAddBB, exitBB);
+
+  // do_add block
+  builder.SetInsertPoint(doAddBB);
+  llvm::Value* outPtr = kernel->getArg(0);
+  llvm::Value* aPtr = kernel->getArg(1);
+  llvm::Value* bPtr = kernel->getArg(2);
+
+  llvm::Value* aElemPtr = builder.CreateGEP(f32Ty, aPtr, globalIdx, "a_elem_ptr");
+  llvm::Value* bElemPtr = builder.CreateGEP(f32Ty, bPtr, globalIdx, "b_elem_ptr");
+  llvm::Value* aVal = builder.CreateLoad(f32Ty, aElemPtr, "a_val");
+  llvm::Value* bVal = builder.CreateLoad(f32Ty, bElemPtr, "b_val");
+  llvm::Value* sumVal = builder.CreateFAdd(aVal, bVal, "sum_val");
+  llvm::Value* outElemPtr = builder.CreateGEP(f32Ty, outPtr, globalIdx, "out_elem_ptr");
+  builder.CreateStore(sumVal, outElemPtr);
+  builder.CreateBr(exitBB);
+
+  // exit block
+  builder.SetInsertPoint(exitBB);
+  builder.CreateRetVoid();
+
+  return mod;
+}
+
 void saveArtifact(std::string_view filepath, std::string_view content) {
   std::ofstream outFile{std::string(filepath)};
   if (outFile.is_open()) {
@@ -233,6 +304,14 @@ std::optional<std::string> emitPTX(llvm::Module&,
 void markAsNVPTXKernel(llvm::Module&, llvm::Function*) {}
 
 std::unique_ptr<llvm::Module> createSmokeTestModule(
+    llvm::LLVMContext&,
+    llvm::TargetMachine*,
+    std::string_view,
+    std::string_view) {
+  return nullptr;
+}
+
+std::unique_ptr<llvm::Module> createVectorAddModule(
     llvm::LLVMContext&,
     llvm::TargetMachine*,
     std::string_view,

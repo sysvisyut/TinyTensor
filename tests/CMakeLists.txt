@@ -106,3 +106,17 @@ target_link_libraries(tinytensor_nvptx_smoke_test
 
 gtest_discover_tests(tinytensor_nvptx_smoke_test)
 
+add_executable(tinytensor_cuda_integration_test
+  cuda_integration_test.cpp
+)
+
+target_link_libraries(tinytensor_cuda_integration_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_cuda_integration_test)
+
+
