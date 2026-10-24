@@ -92,3 +92,17 @@ target_link_libraries(tinytensor_fusion_test
 )
 
 gtest_discover_tests(tinytensor_fusion_test)
+
+add_executable(tinytensor_nvptx_smoke_test
+  nvptx_smoke_test.cpp
+)
+
+target_link_libraries(tinytensor_nvptx_smoke_test
+  PRIVATE
+    tinytensor
+    tinytensor_warnings
+    GTest::gtest_main
+)
+
+gtest_discover_tests(tinytensor_nvptx_smoke_test)
+

@@ -104,7 +104,7 @@ message(STATUS "========================================================")
 # -----------------------------------------------------------------------------
 # Main Library Target
 # -----------------------------------------------------------------------------
-add_library(tinytensor
+set(TINYTENSOR_SOURCES
   src/tinytensor.cpp
   src/ir.cpp
   src/ir/verifier.cpp
@@ -112,7 +112,10 @@ add_library(tinytensor
   src/pass.cpp
   src/passes/dce.cpp
   src/passes/fusion.cpp
+  src/backend/nvptx_target.cpp
 )
+
+add_library(tinytensor ${TINYTENSOR_SOURCES})
 
 target_link_libraries(tinytensor
   PRIVATE
@@ -126,6 +129,21 @@ target_include_directories(tinytensor
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
+
+if(TINYTENSOR_LLVM_FOUND)
+  target_compile_definitions(tinytensor PUBLIC TINYTENSOR_HAS_LLVM=1)
+  target_include_directories(tinytensor SYSTEM PUBLIC ${LLVM_INCLUDE_DIRS})
+  llvm_map_components_to_libnames(LLVM_TARGET_LIBS
+    Core
+    Analysis
+    Target
+    NVPTX
+    Passes
+    MC
+    Support
+  )
+  target_link_libraries(tinytensor PUBLIC ${LLVM_TARGET_LIBS})
+endif()
 
 # -----------------------------------------------------------------------------
 # Test Suite
