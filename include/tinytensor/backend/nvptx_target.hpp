@@ -5,6 +5,8 @@
 #include <string_view>
 #include <optional>
 
+#include "tinytensor/backend/tiled_matmul.hpp"
+
 namespace llvm {
 class LLVMContext;
 class Module;

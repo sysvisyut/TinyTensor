@@ -110,6 +110,7 @@ set(TINYTENSOR_SOURCES
   src/passes/dce.cpp
   src/passes/fusion.cpp
   src/backend/nvptx_target.cpp
+  src/backend/tiled_matmul.cpp
 )
 
 add_library(tinytensor ${TINYTENSOR_SOURCES})
