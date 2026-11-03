@@ -6,6 +6,7 @@
 #include <optional>
 
 #include "tinytensor/backend/tiled_matmul.hpp"
+#include "tinytensor/backend/naive_matmul.hpp"
 
 namespace llvm {
 class LLVMContext;

@@ -111,6 +111,7 @@ set(TINYTENSOR_SOURCES
   src/passes/fusion.cpp
   src/backend/nvptx_target.cpp
   src/backend/tiled_matmul.cpp
+  src/backend/naive_matmul.cpp
 )
 
 add_library(tinytensor ${TINYTENSOR_SOURCES})
@@ -156,3 +157,13 @@ if(TINYTENSOR_BUILD_TESTS)
   enable_testing()
   add_subdirectory(tests)
 endif()
+
+# -----------------------------------------------------------------------------
+# Benchmarks & Examples
+# -----------------------------------------------------------------------------
+add_executable(tinytensor_benchmark bench/benchmark.cpp)
+target_link_libraries(tinytensor_benchmark PRIVATE tinytensor tinytensor_warnings)
+
+add_executable(tinytensor_example_matmul examples/matmul_example.cpp)
+target_link_libraries(tinytensor_example_matmul PRIVATE tinytensor tinytensor_warnings)
+

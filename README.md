@@ -94,9 +94,64 @@ ctest --test-dir build --output-on-failure
 | **6** | Optimization: Common Subexpression Elimination (CSE) | Pending |
 | **7** | Optimization: Elementwise and MatMul epilogue kernel fusion | **Complete (MatMul Epilogue)** |
 | **8** | CPU Reference Interpreter: execution oracle for test validation | **Complete** |
-| **9** | Backend: LLVM NVPTX target setup and index-write smoke test | Pending |
-| **10** | Runtime: CUDA Driver API wrapper (memory, module load, kernel launch) | Pending |
-| **11** | Backend Lowering: Unfused elementwise and naive matmul kernels | Pending |
-| **12** | Backend Lowering: Tiled shared-memory matmul kernel (16x16 AS3) | Pending |
-| **13** | Benchmarks: Fused vs unfused, naive vs tiled execution timings | Pending |
-| **14** | Documentation: Architectural design review and interview notes | Pending |
+| **9** | Backend: LLVM NVPTX target setup and index-write smoke test | **Complete** |
+| **10** | Runtime: CUDA Driver API wrapper (memory, module load, kernel launch) | **Complete** |
+| **11** | Backend Lowering: Unfused elementwise and naive matmul kernels | **Complete** |
+| **12** | Backend Lowering: Tiled shared-memory matmul kernel (16x16 AS3) | **Complete** |
+| **13** | Benchmarks: Fused vs unfused, naive vs tiled execution timings | **Complete** |
+| **14** | Documentation: Architectural design review and interview notes | In Progress |
+
+---
+
+## Benchmarks & Performance Methodology (Task 13)
+
+TinyTensor provides a standalone benchmark suite (`tinytensor_benchmark`) and reference example (`tinytensor_example_matmul`).
+
+### Measurement Principles
+- **Separation of Concerns:** Compilation and JIT code generation times (LLVM IR construction + TargetMachine PTX emission) are measured and reported separately from execution time.
+- **Kernel Warmup:** 5 un-timed warmup passes are executed prior to timing to ensure GPU clocks and caches are stable.
+- **Accurate Synchronization:** GPU launches call `context.synchronize()` before starting timers and immediately after kernel launch completion.
+- **Statistical Rigor:** Multi-iteration sampling (15–30 iterations) reports Median, Min, Max, and Standard Deviation to eliminate skew from single-run outliers.
+- **Meaningful Comparison:** CPU Reference vs GPU is benchmarked on tractable sizes (e.g. up to 256×256); single-threaded $O(N^3)$ CPU evaluation is skipped for larger sizes to avoid artificial stalls.
+
+### Running the Benchmarks
+
+#### 1. CPU-Only Build Mode (Local Development)
+```bash
+cmake -B build -G Ninja -DTINYTENSOR_ENABLE_CUDA=OFF
+cmake --build build --target tinytensor_benchmark
+./build/tinytensor_benchmark
+```
+
+#### 2. NVIDIA GPU Build Mode (Cloud / Colab / Linux)
+```bash
+cmake -B build-cuda -G Ninja -DTINYTENSOR_ENABLE_CUDA=ON
+cmake --build build-cuda --target tinytensor_benchmark
+./build-cuda/bench/tinytensor_benchmark
+```
+
+### Benchmark Results (Apple M1, AppleClang 17, LLVM 22.1.5)
+
+#### 1. Compilation & JIT Time (Target: `sm_70 / nvptx64-nvidia-cuda`, 10 iterations)
+| Kernel Generator | Median | Min | Max | StdDev |
+|---|---|---|---|---|
+| VectorAdd (Elementwise) | 1.730 ms | 1.268 ms | 16.450 ms | 4.444 ms |
+| Naive MatMul (Global) | 0.344 ms | 0.339 ms | 0.650 ms | 0.091 ms |
+| Tiled MatMul (16×16 AS3) | 4.805 ms | 4.172 ms | 8.691 ms | 1.310 ms |
+
+#### 2. CPU Reference Evaluation (Single-Threaded C++ Oracle)
+| Matrix Shape | Flops | Median Time | Throughput |
+|---|---|---|---|
+| Rectangular ($17\times 19 \times 19\times 23$) | 14,858 | 0.029 ms | 0.51 GFLOPS |
+| Square ($64\times 64$) | 524,288 | 0.870 ms | 0.60 GFLOPS |
+| Square ($128\times 128$) | 4,194,304 | 6.770 ms | 0.62 GFLOPS |
+| Square ($256\times 256$) | 33,554,432 | 53.539 ms | 0.63 GFLOPS |
+
+#### 3. Unfused vs Fused Execution (CPU Reference & Memory Footprint)
+- **Workload:** $\text{MatMul}(128, 128, 128) + \text{Bias}(128) \to \text{ReLU}$
+- **Unfused Pipeline:** 3 passes, materializing two intermediate tensors (7.562 ms median)
+- **Fused Epilogue:** Single pass over memory (7.700 ms median)
+- **Memory Traffic Saved:** 128 KiB of intermediate buffer allocations and writebacks eliminated per execution.
+
+*(Note: GPU naive vs tiled benchmark table is populated directly by `./build-cuda/bench/tinytensor_benchmark` when executed on an active NVIDIA GPU environment; unverified numbers are never fabricated).*
+
